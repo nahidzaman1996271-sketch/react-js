@@ -5,13 +5,30 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const todoTitle = "Call Family";
+
+const date = new Date(); // <-- this was missing
+const dateName = date.getDate();
+const monthName = date.getMonth();
+const currentYear = date.getFullYear();
+
+// const headingStyle = {
+//   backroundColor : "purple",
+//   color:"red",
+//   textAlign: "center",
+//   padding: "15px"
+// }
+
 root.render(
   <React.StrictMode>
-    <h1>Welcome</h1>
+    <div>
+      <h1 className="headingStyle">Welcome</h1>
+      <h3>{todoTitle}</h3>
+      <p>{dateName}</p>
+      <p>{monthName}</p>
+      <p>{currentYear}</p>
+    </div>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
